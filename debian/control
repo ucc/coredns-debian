@@ -1,8 +1,9 @@
-Source: coredns
+Source: ucc-coredns
 Maintainer: Miek Gieben <miek@coredns.io>
 Build-Depends: debhelper (>= 9), ca-certificates, curl, dh-systemd, lsb-release, jq
 
-Package: coredns
+Package: ucc-coredns
 Architecture: any
 Description: DNS server that chains plugins
 Depends: adduser
+Conflicts: coredns
