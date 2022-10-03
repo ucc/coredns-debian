@@ -1,13 +1,17 @@
---- a/plugin.cfg
-+++ b/plugin.cfg
-@@ -69,3 +69,4 @@
- whoami:whoami
+Index: coredns/plugin.cfg
+===================================================================
+--- coredns.orig/plugin.cfg
++++ coredns/plugin.cfg
+@@ -70,3 +70,4 @@ whoami:whoami
  on:github.com/coredns/caddy/onevent
  sign:sign
+ view:view
 +unbound:github.com/coredns/unbound
---- a/Makefile.release
-+++ b/Makefile.release
-@@ -62,13 +62,15 @@
+Index: coredns/Makefile.release
+===================================================================
+--- coredns.orig/Makefile.release
++++ coredns/Makefile.release
+@@ -62,13 +62,15 @@ build:
  	@go version
  	@echo Cleaning old builds
  	@rm -rf build && mkdir build
