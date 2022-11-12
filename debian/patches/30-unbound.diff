@@ -11,7 +11,7 @@ Index: coredns/Makefile.release
 ===================================================================
 --- coredns.orig/Makefile.release
 +++ coredns/Makefile.release
-@@ -62,13 +62,15 @@ build:
+@@ -62,6 +62,8 @@ build:
  	@go version
  	@echo Cleaning old builds
  	@rm -rf build && mkdir build
@@ -19,7 +19,8 @@ Index: coredns/Makefile.release
 +	@go get github.com/coredns/unbound
  #	@echo Building: darwin/amd64 - $(VERSION)
  #	mkdir -p build/darwin/amd64 && $(MAKE) coredns BINARY=build/darwin/amd64/$(NAME) SYSTEM="GOOS=darwin GOARCH=amd64" CHECKS="" BUILDOPTS=""
- #	@echo Building: windows/amd64 - $(VERSION)
+ #	@echo Building: darwin/arm64 - $(VERSION)
+@@ -70,7 +72,7 @@ build:
  #	mkdir -p build/windows/amd64 && $(MAKE) coredns BINARY=build/windows/amd64/$(NAME).exe SYSTEM="GOOS=windows GOARCH=amd64" CHECKS="" BUILDOPTS=""
  	@echo Building: linux/$(LINUX_ARCH) - $(VERSION) ;\
  	for arch in $(LINUX_ARCH); do \
